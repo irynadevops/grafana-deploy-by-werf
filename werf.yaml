@@ -2,5 +2,6 @@ configVersion: 1
 project: grafana
 ---
 image: grafana
-
+dockerfile: Dockerfile
+target: grafana
 
