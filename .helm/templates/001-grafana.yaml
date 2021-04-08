@@ -18,7 +18,7 @@ spec:
       - image: {{ .Values.werf.image.grafana }}
         name: grafana
         ports:
-        - containerPort: 80
+        - containerPort: 3000
           name: grafana
 ---
 apiVersion: v1
@@ -32,7 +32,7 @@ spec:
   ports:
   - name: "grafana-service"
     port: 3000
-    targetPort: 80
+    targetPort: 3000
     nodePort: 31161
   selector:
     app: grafana
