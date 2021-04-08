@@ -3,6 +3,5 @@ project: grafana
 ---
 image: grafana
 dockerfile: Dockerfile
-target: grafana
 context: grafana
 
