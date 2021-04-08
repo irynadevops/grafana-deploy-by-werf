@@ -1,18 +1,11 @@
 networks:
   vpc-network:
-    driver: bridge
-
-volumes:
-    grafana_data: {}
 
 services:
   grafana:
    image: "${WERF_GRAFANA_DOCKER_IMAGE_NAME}"
-   restart: unless-stopped
-   expose:
-     - 3000
    ports:
-     - 3000:3000
+     - 3000:80
    networks:
      - vpc-network
 
