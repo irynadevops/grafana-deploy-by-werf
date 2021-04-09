@@ -43,7 +43,12 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/rewrite-target: /
+    cert-manager.io/issuer: "letsencrypt-staging"
 spec:
+  tls:
+  - hosts:
+    - "grafana.devops.net.by"
+    secretName: grafana-devops-net-by
   rules:
     - host: grafana.devops.net.by
       http:
